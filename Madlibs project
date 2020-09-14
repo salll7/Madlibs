@@ -1,0 +1,44 @@
+def prompt1():
+	print("You chose prompt1")
+	location = input("Insert a location")
+	verb = input("Insert a verb")
+	name = input("Insert a name")
+	location2 = input("Insert another location")
+	verb2 = input("Insert another verb")
+	
+	print(
+	    "I was tired after work when I decided to go to (%s). While I was there, I started to (%s), when (%s) came up and hit me. Out of shock, I went to (%s), I began to (%s) before finally going to sleep"
+	    % (location, verb, name, location2, verb2))
+
+def prompt2():
+	print("You chose prompt2")
+	family = input("Put a family member")
+	verb = input(" Insert a verb")
+	noun = input("Input a noun")
+	food = input(" Put the name of any food dish")
+	print(  " I hate my (%s) ! They always decide to (%s) just before I shower. To get my revenge, I put (%s) in their (%s). I don't think they'll bother me anymore."
+		    % (family, verb, noun, food))
+
+def random():
+	print("You chose random")
+	planet = input(" Put a planet name")
+	name = input("Insert a name")
+	name1 = input(" Insert a different name")
+	number = input(" Insert numerical value")
+	print("Hello, my name is (%s), and I'm going to (%s) with my friend (%s). We are going for the sole purpose of getting (%s) dollars. Wish us luck !! " % ( name, planet, name1, number)	)
+
+def storyPicker(promptChoice):
+	if promptChoice == "1":
+		prompt1()
+	elif promptChoice == "2":
+		prompt2()
+	elif (promptChoice == "r") or (promptChoice == "R"):
+		random()
+
+def main():
+  print(" Hello, this is my Madlib!\n Choose a prompt !!")
+  promptChoice = input("Enter 1, 2, or (R)andom: ")
+  storyPicker(promptChoice)
+
+if __name__ == "__main__":
+				main()
